@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css_jeu_2.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="la_montre.js" defer></script>
+
+
+<title>Konamicash</title>
+</head>
+
+<body>
+	<header class="logo">
+		<img src="logo_konami.png">
+	</header>
+					<!--la navbar-->
+	<nav>	
+		<div class="main-navlinks">
+			<button class="hamburger" type="button" aria-label="toggle navigation" aria-expanded="false">
+				
+			<span></span>
+			<span></span>
+			<span></span>
+			
+			</button>
+			
+			
+			<!--le menu-->
+		<div class="navlinks-container">
+		
+				<ul class="menu-links">
+				
+					<li class="nav-link">
+							<a href="#">
+								<i class='bx bxs-user icon'></i>
+								<span class="text nav-text">user </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="#">
+								<i class='bx bxs-wallet icon'></i>
+								<span class="text nav-text">solde </span>
+							</a>
+					</li>
+					
+					
+					<li class="nav-link">
+							<a href="#">
+								<i class='bx bxs-bank icon'></i>
+								<span class="text nav-text">Dépot </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="#">
+								<i class='bx bx-history icon'></i>
+								<span class="text nav-text">Transactions </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="#">
+								<i class='bx bxs-dice-6 icon'></i>
+								<span class="text nav-text">Jeux </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="modification.php">
+								<i class='bx bxs-lock icon'></i>
+								<span class="text nav-text">Mot de passe </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="modification_mail.php">
+								<i class='bx bxs-envelope icon'></i>
+								<span class="text nav-text">Mail </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="modification_pseudo.php">
+								<i class='bx bxs-edit-alt icon'></i>
+								<span class="text nav-text">Pseudo </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="modification_du_tel.php">
+								<i class='bx bxs-phone icon'></i>
+								<span class="text nav-text">Téléphone </span>
+							</a>
+					</li>
+					
+					
+					
+					<li class="nav-link">
+							<a href="aide.php">
+								<i class='bx bxs-help-circle icon'></i>
+								<span class="text nav-text">Aide </span>
+							</a>
+					</li>
+					
+					<li class="nav-link">
+							<a href="btn_deconnexion.php">
+								<i class='bx bxs-log-out icon'></i>
+								<span class="text nav-text">Déconnexion </span>
+							</a>
+					</li>
+					
+					
+				</ul>
+			
+		                  <!--<a href="#">
+								<i class='bx bxs-user'></i>
+								<span class="links_name">Utilisateur</span>
+						  </a>
+						  
+						<a href="#">
+								<i class='bx bxs-wallet'></i>
+								<span class="links_name">Solde :</span>
+						</a>
+						
+						<a href="#">
+								<i class='bx bxs-bank' ></i>
+								<span class="links_name">dépot</span>
+						</a>
+		
+						<a href="#">
+								<i class='bx bx-history'></i>
+								<span class="links_name">transactions</span>
+						</a>
+						
+						<a href="#">
+								<i class='bx bxs-dice-6'></i>
+								<span class="links_name">jeux</span>
+						</a>
+						
+						
+						<a href="#">
+								<i class='bx bxs-lock'></i>
+								<span class="links_name">mot de passe</span>
+						</a>
+						
+						
+						<a href="#">
+								<i class='bx bxs-envelope'></i>
+								<span class="links_name">mail</span>
+						</a>
+						
+						
+						<a href="#">
+								<i class='bx bxs-edit-alt'></i>
+								<span class="links_name">pseudo</span>
+						</a>
+						
+						
+						<a href="#">
+								<i class='bx bxs-phone'></i>
+								<span class="links_name">téléphone</span>
+						</a>
+						
+						
+						<a href="#">
+							<i class='bx bxs-help-circle' ></i>
+								<span class="links_name">Aide</span>
+						</a>
+						
+						
+						<a href="#">
+							<i class='bx bxs-log-out'></i>
+								<span class="links_name">Se déconnecter</span>
+						</a> -->
+		
+		</div>	
+		
+		
+		</div>
+	
+	</nav>
+	
+	<!--le chronomètre-->
+			  <div class="la_montre_container"><div class="la_montre"></div></div>
+			  
+			  
+	
+	<!--l'arène-->
+	<div class="konami_container" id="konami_container"> 
+		<div class="konami" id="konami">
+		<!--<video autoplay loop muted plays-inline class="back_video">	
+		
+			<source src="konami_sample_6.mp4" type="video/mp4">
+		
+		</video> -->
+		
+	</div>
+				<!--selection des p et des mises-->
+	<div class="controller">
+		<form method ="POST" action="formulairedejeu.php" name="position">
+			<main class="select-menu">
+			<span class="title">Position</span>
+				<select name="position" id="">
+					
+					<option value="1">P1</option>
+					<option value="2">P2</option>
+					<option value="3">P3</option>
+					<option value="4">P4</option>
+					<option value="5">P5</option>
+					<option value="6">P6</option>
+					<option value="7">P7</option>
+				
+				</select>
+				
+				<span class="title"></span>
+				<i class="fa-solid fa-chevron-down icon"></i>
+			</main>
+			
+			
+			<main class="select-menu">
+			<span class="title">XOF</span>
+				<select name="mise" id="">
+					
+					<option value=100> 100</option>
+					<option value=150> 150 </option>
+					<option value=200> 200</option>
+					<option value=250> 250 </option>
+					<option value=300> 300 </option>
+					<option value=350> 350 </option>
+					<option value=400> 400 </option>
+					<option value=450> 450 </option>
+					<option value=500> 500 </option>
+					<option value=550> 550 </option>
+					<option value=600> 600 </option>
+					<option value=650> 650 </option>
+					<option value=700> 700 </option>
+					<option value=750> 750 </option>
+					<option value=800> 800 </option>
+					<option value=850> 850 </option>
+					<option value=900> 900 </option>
+					<option value=950> 950 </option>
+					<option value=1000> 1000 </option>
+					<option value=2000> 2000 </option>
+					<option value=3000> 3000 </option>
+					<option value=4000> 4000 </option>
+					<option value=5000> 5000 </option>
+					<option value=10000> 10000 </option> 
+				
+				</select>
+				
+				<span class="title"></span>
+				<i class="fa-solid fa-chevron-down icon"></i>
+			</main>
+			
+			
+								<button name = "pari_client" type="submit" value="valider" id="envoyer"  />
+								
+								
+
+</form>
+	
+	
+	
+	</div>
+	
+	<div class="parier">
+	
+		<label for="envoyer" > valider</label>
+	
+	</div>
+	<div class ="message" id="message">
+		
+	<p>veuillez patienter quelques instants</p>
+	
+
+	</div>
+</div>
+	
+	<!--la sidebar	
+		<div class="sidebar">
+		
+				<div class="logo_content">
+				
+					<div class="logo">
+					
+							<div class="logo_name">KonamiCash</div>
+					
+					</div>
+				<!--bouton hamburger
+		<button class="hamburger2" id="hamburger3" type="button" aria-label="toggle navigation" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<!--fin hamburger
+				
+				</div>
+			<ul class="nav_list">
+					<li>
+						<a href="#">
+								<i class='bx bxs-user'></i>
+								<span class="links_name">Utilisateur</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-wallet'></i>
+								<span class="links_name">Solde :</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+					</li>
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-bank' ></i>
+								<span class="links_name">dépot</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bx-history'></i>
+								<span class="links_name">transactions</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-dice-6'></i>
+								<span class="links_name">jeux</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-lock'></i>
+								<span class="links_name">mot de passe</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+					</li>
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-envelope'></i>
+								<span class="links_name">mail</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-edit-alt'></i>
+								<span class="links_name">pseudo</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+			
+					
+					
+					<li>
+						<a href="#">
+								<i class='bx bxs-phone'></i>
+								<span class="links_name">téléphone</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					<li>
+						<a href="#">
+							<i class='bx bxs-help-circle' ></i>
+								<span class="links_name">Aide</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+					
+					
+					<li>
+						<a href="#">
+							<i class='bx bxs-log-out'></i>
+								<span class="links_name">Se deconnecter</span>
+						</a>
+						<!--<span class="tooltip">Utilisateur</span>
+						
+					</li>
+			
+			</ul>	
+				
+		</div> -->
+
+		
+	
+		
+		
+		
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+</body>

@@ -1,102 +1,217 @@
-/*let temps =  9
-const timerElement = document.getElementById("message")
-      
-	  
-	  function diminuerTemps() {
-        document.getElementById("message").innerHTML =`vous serez redirigé vers la page des résultats dans ${temps} secondes `;
-        temps--;
-		if(temps === 0){window.location.replace("result_page.php");
-		 }
-    
-    }
-
-function diminuertemps2(){
-  setInterval(diminuerTemps,1000)
-}
-
-/*-------------------------------------------------
-function affichage_equipe(){
-  const url2 = "affichage_equipe.php";
-fetch(url2)
-  .then(resp2 => resp2.text())
-  .then(data2 =>{
-	  document.getElementById('konami').innerHTML=data2
-  })
-  
- 
-
-  
-}
+/*test codenepal*/
 
 
 
-
-function redirection(){
+const connexion = document.getElementById("connexion"),
+		creation= document.getElementById("registration"),
+		aide= document.getElementById("aide"),
+		lienaide= document.querySelector(".aide"),
+		lienconditions=document.querySelector(".conditions"),
+		conditions= document.getElementById("Conditions"),
+		mpf=document.querySelector(".mpf"),
+		mp= document.getElementById("mot_de_passe_oublie"),
+		pwShowHide = document.querySelectorAll(".showHidePw"),
+		pwFields = document.querySelectorAll(".password"),
+		login = document.querySelector(".login-link"),
 	
-	setTimeout(()=>{let refresh;
-let test = document.getElementById('demo')
-function stoprefresh (){
-  clearInterval(refresh)
+		iconClose= document.querySelector(".icon-close"),
+		iconCloser= document.querySelector(".icon-close-r"),
+		iconClosemdp= document.querySelector(".icon-close-mdp"),
+		iconCloseaide= document.querySelector(".icon-close-aide"),
+		iconCloseconditions= document.querySelector(".icon-close-conditions"),
+		
+		signUp = document.querySelector(".signup-link");
+		
+		
+		
+		
+		pwShowHide.forEach(eyeIcon =>{
+			eyeIcon.addEventListener("click", ()=>{
+				
+				pwFields.forEach(pwField=>{
+					
+					if(pwField.type ==="password") {
+						
+					pwField.type="text";
+					
+					pwShowHide.forEach(icon=>{
+						 icon.classList.replace("uil-eye","uil-eye-slash")
+					})
+					
+					}else{
+						
+						pwField.type ="password";
+						pwShowHide.forEach(icon=>{
+						 icon.classList.replace("uil-eye-slash","uil-eye")
+					})
+					}
+						
+						
+			})
+		})
+		})
+
+
+
+login.addEventListener("click",()=>{
+	connexion.style.display="block";
+	navlinksContainer.classList.remove("open");
+	hamburgertoggler.classList.remove("open");
+	hamburgertoggler.setAttribute("aria-expanded",false)
+});
+
+
+signUp.addEventListener("click",()=>{
+	registration.style.display="block";
+	navlinksContainer.classList.remove("open");
+	hamburgertoggler.classList.remove("open");
+	hamburgertoggler.setAttribute("aria-expanded",false)
+});
+
+mpf.addEventListener("click",()=>{
+	mp.style.display="block";
+	navlinksContainer.classList.remove("open");
+	hamburgertoggler.classList.remove("open");
+	hamburgertoggler.setAttribute("aria-expanded",false)
+});
+
+
+lienaide.addEventListener("click",()=>{
+	aide.style.display="block";
+	navlinksContainer.classList.remove("open");
+	hamburgertoggler.classList.remove("open");
+	hamburgertoggler.setAttribute("aria-expanded",false)
+});
+
+lienconditions.addEventListener("click",()=>{
+	conditions.style.display="block";
+	navlinksContainer.classList.remove("open");
+	hamburgertoggler.classList.remove("open");
+	hamburgertoggler.setAttribute("aria-expanded",false)
+});
+
+
+
+iconCloseconditions.addEventListener("click",()=>{
+conditions.style.display="none"});
+
+
+iconCloseaide.addEventListener("click",()=>{
+aide.style.display="none"});
+
+iconClose.addEventListener("click",()=>{
+connexion.style.display="none"});
+
+iconCloser.addEventListener("click",()=>{
+registration.style.display="none"});
+
+iconClosemdp.addEventListener("click",()=>{
+mp.style.display="none"});
+
+
+
+/*liens pour faire apparaitre les div
+let bouton_se_connecter =document.getElementById("togg_se_connecter");
+let formulaire_de_connexion=document.getElementById("id_connexion");
+bouton_se_connecter.addEventListener("click",()=>{if(getComputedStyle(formulaire_de_connexion).display !="none")
+{formulaire_de_connexion.style.display="none";} else {formulaire_de_connexion.style.display="block";}})
+
+let bouton_creer_un_compte =document.getElementById("togg_inscription");
+let form_inscription=document.getElementById("formulaire_inscription");
+bouton_creer_un_compte.addEventListener("click",()=>{if(getComputedStyle(form_inscription).display !="none")
+{form_inscription.style.display="none";} else {form_inscription.style.display="block";}})
+
+
+let bouton_reinitialisation =document.getElementById("togg_mot_de_passe");
+let form_oublie=document.getElementById("oublie");
+bouton_reinitialisation.addEventListener("click",()=>{if(getComputedStyle(form_oublie).display !="none")
+{form_oublie.style.display="none";} else {form_oublie.style.display="block";}})*/
+
+
+/*bouton fermer
+
+let fermer_co =document.getElementById("fermer");
+let formulaire_de_connexion1=document.getElementById("id_connexion");
+fermer_co.addEventListener("click",()=>{if(getComputedStyle(formulaire_de_connexion1).display !="none")
+{formulaire_de_connexion1.style.display="none";} else {formulaire_de_connexion1.style.display="block";}})
+
+
+
+
+let bouton_fermer_creer_un_compte =document.getElementById("fermer_inscription");
+let fermer_inscription=document.getElementById("formulaire_inscription");
+bouton_fermer_creer_un_compte.addEventListener("click",()=>{if(getComputedStyle(fermer_inscription).display !="none")
+{fermer_inscription.style.display="none";} else {fermer_inscription.style.display="block";}})
+
+
+let close_reinitialisation =document.getElementById("fermer_reset");
+let close_oublie=document.getElementById("oublie");
+close_reinitialisation.addEventListener("click",()=>{if(getComputedStyle(form_oublie).display !="none")
+{close_oublie.style.display="none";} else {close_oublie.style.display="block";}})*/
+
+
+
+
+
+
+
+const hamburgertoggler = document.querySelector(".hamburger")
+const navlinksContainer = document.querySelector (".navlinks-container");
+
+const toggleNav = () => {hamburgertoggler.classList.toggle("open")
+
+const ariatoggle= hamburgertoggler.getAttribute
+("aria-expanded")==="true" ? "false" : "true";
+hamburgertoggler.setAttribute("aria-expanded",ariatoggle)
+
+navlinksContainer.classList.toggle("open")
 }
 
-refresh= setInterval(()=>{
-  
-  const url = "page_de_jeu.php";
-fetch(url)
-  .then(resp => resp.json())
-  .then(data => {
-    console.log(data);
-    const resultat = data.situation;
-if(resultat===1){stoprefresh();affichage_equipe();diminuertemps2()};}
-  
-  
-	)},1000)},3000)
+hamburgertoggler.addEventListener("click",toggleNav);
 
-}
-*/
+new ResizeObserver(entries=>{
+	if (entries[0].contentRect.width <= 555){
+	navlinksContainer.style.transition="transform 0.3s ease-out"
+} else{navlinksContainer.style.transition="none"}
+}).observe(document.body)
 
+/*caroussel*/
+const items = document.querySelectorAll('img');
+const nbSlide= items.length;
+const suivant=document.querySelector('.right');
+const precedant= document.querySelector('.left');
+let count=1;
 
-/*hamburger*/
-
-const hamburgerToggler = document.querySelector(".hamburger")
-
-const navLinksContainer = document.querySelector(".navlinks-container");
-
-const toggleNav = e=> {
-hamburgerToggler.classList.toggle("open")
-navLinksContainer.classList.toggle("open")
-}
-
-hamburgerToggler.addEventListener("click",toggleNav)
-
-
-
-window.onload = function () {
-
-const text = document.querySelector('h3');
-const valider = document.getElementById('envoyer');
-
-function chronometre(){
-
-    const temps_ecoule=Date.now()-1698327535137;
-    const temps_ecoule_sec=Math.floor(temps_ecoule/1000);
-
-    const quart_heure= Math.floor(temps_ecoule/(1000*60*15));
-    const minutes= Math.floor((temps_ecoule%(1000*60*15))/(1000*60));
-    const secondes=Math.floor ((temps_ecoule%(1000*60))/1000);
-
-    document.querySelector(".la_montre").innerHTML =`${minutes}m :  ${secondes}s`;
+function slideSuivante(){
 	
-if ((temps_ecoule_sec%(15*60))===0){valider.setAttribute('disabled','true');message.classList.toggle('visible'); /*redirection();*/
+	items[count].classList.remove('active');
+	
+	
+	/*puisque j'ai deux balises images qui me servent de boutons de navigation
+	je rajoute donc 2 sur ma dernière image celle censé etre visible*/if(count< nbSlide - 1){
+		count++;
+	} else {count=1;}
+	
+	items[count].classList.add('active')
+	console.log(count);
 }
 
-	
-}
-chronometre();
-    const dure_ecoule= setInterval(()=>{chronometre()},1000);
-	
-	
-	
+suivant.addEventListener('click', slideSuivante)/*jusqu'ici tout marche bien mais pour la fonction
+précédante rien ne fontionne*/
 
-}
 
+function slidePrecedante(){
+	items[count].classList.remove('active');
+	if(count>1){
+		count--;
+	} else{
+		count= nbSlide-1;
+	}
+	
+	items[count].classList.add('active')
+}
+precedant.addEventListener('click', slidePrecedante)
+console.log(count);
+
+
+/*explication*/
